@@ -2,12 +2,12 @@
 
   <div class="wrapper">
 
-    <h2 class="footer-heading">{{ site.title }}</h2>
+    <p>{{ site.description }}</p>
 
     <div class="footer-col-wrapper">
       <div class="footer-col footer-col-1">
         <ul class="contact-list">
-          <li>{{ site.title }}</li>
+          <li>Business Inquiries</li>
           <li><a href="mailto:{{ site.email }}">{{ site.email }}</a></li>
         </ul>
       </div>
@@ -29,10 +29,32 @@
       </div>
 
       <div class="footer-col footer-col-3">
-        <p>{{ site.description }}</p>
+        <p id="randomQuote"></p>
       </div>
     </div>
 
   </div>
-
 </footer>
+<script src="{{ site.url }}/js/anchor.min.js"></script>
+<script>
+    var selector = ".docs-layout h2, .docs-layout h3";
+    anchors.options = {
+        placement: "left",
+        class: "anchor-link"
+    };
+    anchors.add(selector);
+</script>
+<script>
+function changeVersion() {
+    var e = document.getElementById("version");
+    var strVersion = e.options[e.selectedIndex].value;
+    window.location = "{{ site.url }}/" + strVersion + "/";
+}
+var quotes = [
+    "The best thing about a boolean is even if you are wrong, you are only off by a bit.",
+    "There are two ways to write error-free programs; only the third one works.",
+    "One man’s crappy software is another man’s full time job.",
+    "In order to understand recursion, one must first understand recursion."
+]
+document.getElementById("randomQuote").innerHTML = quotes[Math.floor(Math.random()*quotes.length)];
+</script>

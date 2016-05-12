@@ -1,15 +1,13 @@
----
-layout: default
----
 <div class="container">
     <div class="columns docs-layout">
         <div class="one-fourth column">
             <nav class="menu docs-menu">
-                {% for catitem in site.categories %}
-                    {% if catitem[0] == page.categories[0] %}
+                {% assign current = post.title %}
+                {% for catitem in site.categories  %}
+                    {% if catitem[0] == post.categories[0] %}
                         {% for post in site.posts %}
                             {% if post.categories contains catitem[0] %}
-                                {% if post.title == page.title %}
+                                {% if post.title == current %}
                                     <a class="menu-item selected" href="{{ post.url }}">{{ post.title }}</a>
                                 {% else %}
                                     <a class="menu-item" href="{{ post.url }}">{{ post.title }}</a>
@@ -25,7 +23,7 @@ layout: default
                 <select class="form-select right" id="version" onchange="changeVersion()">
                     {% for catitem in site.categories %}
                         {% unless site.hidden_versions contains catitem[0] %}
-                            {% if catitem[0] == page.categories[0] %}
+                            {% if catitem[0] == post.categories[0] %}
                                 <option selected="selected">{{ catitem[0] }}</option>
                             {% else %}
                                 <option>{{ catitem[0] }}</option>

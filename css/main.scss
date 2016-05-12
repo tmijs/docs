@@ -48,6 +48,54 @@ $on-laptop:        800px;
 // Import partials from `sass_dir` (defaults to `_sass`)
 @import
         "base",
-        "layout",
-        "syntax-highlighting"
+        "layout"
 ;
+
+/*!
+ * Primer
+ * http://primercss.io
+ *
+ * Released under MIT license. Copyright 2015 GitHub, Inc.
+ */
+
+// Primer master file
+//
+// Imports all Primer files in their intended order for easy mass-inclusion.
+// Should you need specific files, you can easily use separate `@import`s.
+
+// Global requirements
+@import "primer/variables";
+@import "primer/mixins";
+
+// Basecoat
+@import "primer/normalize";
+@import "primer/base";
+@import "primer/type";
+@import "primer/layout";
+@import "primer/utilities/utilities";
+
+// Forms and buttons
+@import "primer/forms";
+@import "primer/form-select";
+@import "primer/form-group";
+@import "primer/buttons";
+@import "primer/input-group";
+@import "primer/button-group";
+
+// Components
+@import "primer/alerts";
+@import "primer/avatars";
+@import "primer/blankslate";
+@import "primer/counter";
+@import "primer/markdown";
+@import "primer/menu";
+@import "primer/tabnav";
+@import "primer/filter-list";
+@import "primer/states";
+@import "primer/tooltips";
+
+// Utilities
+@import "primer/flex-table";
+@import "primer/truncate";
+@import "normalize";
+@import "primer/masthead";
