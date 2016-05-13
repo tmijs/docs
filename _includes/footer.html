@@ -45,11 +45,41 @@
     anchors.add(selector);
 </script>
 <script>
+if (typeof String.prototype.endsWith !== "function") {
+    String.prototype.endsWith = function(suffix) {
+        return this.indexOf(suffix, this.length - suffix.length) !== -1;
+    };
+}
+
+// Triggered when changing the version from select box..
 function changeVersion() {
     var e = document.getElementById("version");
     var strVersion = e.options[e.selectedIndex].value;
     window.location = "{{ site.url }}/" + strVersion + "/";
 }
+
+// Update the URL if the version is not specified..
+var links = document.links;
+
+for(var i = 0; i < links.length; i++) {
+    var link = links[i].href;
+
+    // Make sure the link is not external and targets a document in the documentation..
+    if (link.indexOf("{{ site.url }}") === 0 && link.endsWith(".html")) {
+        var url = link.substring(0, link.lastIndexOf("/") + 1);
+        var file = link.split("/").pop();
+        var parts = url.split("/");
+
+        // No version specified in the URL..
+        if (/^v(\d+\.)?(\d+\.)?(\*|\d+)$/.test(parts[parts.length-2]) === false) {
+            var e = document.getElementById("version");
+            var strUser = e.options[e.selectedIndex].value;
+            links[i].href = url + strUser + "/" + file;
+        }
+    }
+}
+
+// Some random quotes that appears in the bottom of the page..
 var quotes = [
     "The best thing about a boolean is even if you are wrong, you are only off by a bit.",
     "There are two ways to write error-free programs; only the third one works.",
