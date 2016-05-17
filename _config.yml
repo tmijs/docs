@@ -1,16 +1,18 @@
 # Site settings
 title: tmi.js - docs
 email: Schmoopiie@tmijs.org
-description: > # this means to ignore newlines until "baseurl:"
-  Twitch is a trademark or registered trademark of Twitch Interactive, Inc. in the U.S. and/or other countries. "tmi.js" is not operated by, sponsored by, or affiliated with Twitch Interactive, Inc. in any way.
-baseurl: "" # the subpath of your site, e.g. /blog
-url: "https://docs.tmijs.org" # the base hostname & protocol for your site
+description: "Twitch is a trademark or registered trademark of Twitch Interactive, Inc. in the U.S. and/or other countries. \"tmi.js\" is not operated by, sponsored by, or affiliated with Twitch Interactive, Inc. in any way."
+baseurl: ""
+url: "https://docs.tmijs.org"
 twitter_username: Schmoopiie
 github_username:  tmi.js
+logo: "https://i.imgur.com/vsdO7N5.png"
 permalink: :categories/:title.html
 latest_version: v0.0.29
 hidden_versions:
-    - v1.0.0
+    - v1.0.0-rc1
+twitter:
+    username: Schmoopiie
 
 # Build settings
 markdown: kramdown
@@ -18,3 +20,6 @@ markdown: kramdown
 sass:
     sass_dir: _sass
     style: compressed
+
+gems:
+    - jekyll-seo-tag

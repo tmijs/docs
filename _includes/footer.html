@@ -14,17 +14,14 @@
 
       <div class="footer-col footer-col-2">
         <ul class="social-media-list">
-          {% if site.github_username %}
-          <li>
-            {% include icon-github.html username=site.github_username %}
-          </li>
-          {% endif %}
-
           {% if site.twitter_username %}
           <li>
-            {% include icon-twitter.html username=site.twitter_username %}
+              <a href="https://twitter.com/{{ site.twitter_username }}" class="twitter-follow-button" data-show-count="false">Follow @{{ site.twitter_username }}</a>
           </li>
           {% endif %}
+          <li>
+              <a href="https://twitter.com/share" class="twitter-share-button" data-via="Schmoopiie" data-hashtags="tmi.js">Tweet</a>
+          </li>
         </ul>
       </div>
 
@@ -36,6 +33,7 @@
   </div>
 </footer>
 <script src="{{ site.url }}/js/anchor.min.js"></script>
+<script>!function(d,s,id){var js,fjs=d.getElementsByTagName(s)[0],p=/^http:/.test(d.location)?'http':'https';if(!d.getElementById(id)){js=d.createElement(s);js.id=id;js.src=p+'://platform.twitter.com/widgets.js';fjs.parentNode.insertBefore(js,fjs);}}(document, 'script', 'twitter-wjs');</script>
 <script>
     var selector = ".docs-layout h2, .docs-layout h3";
     anchors.options = {
@@ -71,7 +69,7 @@ for(var i = 0; i < links.length; i++) {
         var parts = url.split("/");
 
         // No version specified in the URL..
-        if (/^v(\d+\.)?(\d+\.)?(\*|\d+)$/.test(parts[parts.length-2]) === false) {
+        if (/^v(\d+\.)?(\d+\.)?(\*|\d+)\(rc\d+)?$/.test(parts[parts.length-2]) === false) {
             var e = document.getElementById("version");
             var strUser = e.options[e.selectedIndex].value;
             links[i].href = url + strUser + "/" + file;
