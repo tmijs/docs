@@ -13,6 +13,7 @@ hidden_versions:
     - v1.0.0-rc1
 twitter:
     username: Schmoopiie
+    image: "https://i.imgur.com/vsdO7N5.png"
 
 # Build settings
 markdown: kramdown
