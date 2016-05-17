@@ -2,7 +2,7 @@
 layout: post
 title: "Configuration"
 date: 2016-01-01 00:00:00 -0400
-categories: v1.0.0
+categories: v1.0.0-rc1
 ---
 # Configuration
 
