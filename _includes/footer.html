@@ -69,7 +69,7 @@ for(var i = 0; i < links.length; i++) {
         var parts = url.split("/");
 
         // No version specified in the URL..
-        if (/^v(\d+\.)?(\d+\.)?(\*|\d+)\(rc\d+)?$/.test(parts[parts.length-2]) === false) {
+        if (/\bv?(?:0|[1-9][0-9]*)\.(?:0|[1-9][0-9]*)\.(?:0|[1-9][0-9]*)(?:-[\da-z\-]+(?:\.[\da-z\-]+)*)?(?:\+[\da-z\-]+(?:\.[\da-z\-]+)*)?\b/ig.test(parts[parts.length-2]) === false) {
             var e = document.getElementById("version");
             var strUser = e.options[e.selectedIndex].value;
             links[i].href = url + strUser + "/" + file;
