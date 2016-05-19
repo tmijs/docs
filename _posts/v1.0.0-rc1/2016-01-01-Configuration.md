@@ -34,11 +34,12 @@ Each and every option listed below is optional. Running tmi.js without options w
 
 ``logger``: _Object_ - Custom logger with the methods ``info``, ``warn``, and ``error``
 
-## Example
+## Examples
+
+### Node
 
 ~~~ javascript
-// Do NOT include this line if you are using the browser version.
-var irc = require("tmi.js");
+var tmi = require("tmi.js");
 
 var options = {
     options: {
@@ -55,7 +56,44 @@ var options = {
     channels: ["#schmoopiie"]
 };
 
-var client = new irc.client(options);
+var client = new tmi.client(options);
+
+// Connect the client to the server..
+client.connect();
+~~~
+
+### Browser
+**index.html**
+
+~~~ html
+<!DOCTYPE html>
+<html lang="en">
+	<head></head>
+	<body>
+        <script src="//cdn.tmijs.org/js/latest/1.x/tmi.min.js"></script>
+        <script src="example.js"></script>
+	</body>
+</html>
+~~~
+**example.js**
+
+~~~ javascript
+var options = {
+    options: {
+        debug: true
+    },
+    connection: {
+        cluster: "aws",
+        reconnect: true
+    },
+    identity: {
+        username: "Schmoopiie",
+        password: "oauth:a29b68aede41e25179a66c5978b21437"
+    },
+    channels: ["#schmoopiie"]
+};
+
+var client = new tmi.client(options);
 
 // Connect the client to the server..
 client.connect();
