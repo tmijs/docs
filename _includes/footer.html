@@ -12,7 +12,7 @@
         </ul>
       </div>
 
-      <div class="footer-col footer-col-2">
+      <div class="footer-col footer-col-3">
         <ul class="social-media-list">
           {% if site.twitter_username %}
           <li>
@@ -23,10 +23,6 @@
               <a href="https://twitter.com/share" class="twitter-share-button" data-via="Schmoopiie" data-hashtags="tmijs">Tweet</a>
           </li>
         </ul>
-      </div>
-
-      <div class="footer-col footer-col-3">
-        <p id="randomQuote"></p>
       </div>
     </div>
 
@@ -76,13 +72,4 @@ for(var i = 0; i < links.length; i++) {
         }
     }
 }
-
-// Some random quotes that appears in the bottom of the page..
-var quotes = [
-    "The best thing about a boolean is even if you are wrong, you are only off by a bit.",
-    "There are two ways to write error-free programs; only the third one works.",
-    "One man’s crappy software is another man’s full time job.",
-    "In order to understand recursion, one must first understand recursion."
-]
-document.getElementById("randomQuote").innerHTML = quotes[Math.floor(Math.random()*quotes.length)];
 </script>
