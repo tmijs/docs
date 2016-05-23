@@ -70,7 +70,7 @@ client.connect();
 <html lang="en">
 	<head></head>
 	<body>
-        <script src="//cdn.tmijs.org/js/latest/1.x/tmi.min.js"></script>
+        <script src="//cdn.tmijs.org/js/1.0.0-rc1/tmi.min.js"></script>
         <script src="example.js"></script>
 	</body>
 </html>
