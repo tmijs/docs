@@ -59,13 +59,11 @@ if (client.isMod("#schmoopiie", "bob")) {
 
 **RECOMMENDED**
 
-Everytime you receive a message on Twitch, you receive the user data which contain the user-type.
-Read more about user-type on the [Twitch API documentation](https://github.com/justintv/Twitch-API/blob/master/IRC.md#privmsg).
+Everytime you receive a message on Twitch, you receive an object that contains all the information you need from the user.
 
 ~~~ javascript
 client.on("chat", function (channel, user, message, self) {
-    // Username is a mod or username is the broadcaster..
-    if (user["user-type"] === "mod" || user.username === channel.replace("#", "")) {
+    if (user.mod) {
         // User is a mod.
     }
 });
