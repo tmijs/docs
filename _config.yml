@@ -9,7 +9,8 @@ github_username:  tmi.js
 logo: "https://i.imgur.com/vsdO7N5.png"
 permalink: :categories/:title.html
 latest_version: v0.0.29
-hidden_versions: ~
+hidden_versions:
+    - v1.0.0
 twitter:
     username: Schmoopiie
     image: "https://i.imgur.com/vsdO7N5.png"
