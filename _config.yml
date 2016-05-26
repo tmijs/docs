@@ -16,7 +16,8 @@ twitter:
     image: "https://i.imgur.com/vsdO7N5.png"
 
 # Build settings
-markdown: kramdown
+kramdown:
+    input: GFM
 
 sass:
     sass_dir: _sass
