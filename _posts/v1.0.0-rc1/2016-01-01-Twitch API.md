@@ -30,7 +30,7 @@ client.api({
 
 ## Node
 
-We support all of the options available from the [request](https://github.com/request/request#requestoptions-callback) module.
+We support all of the options available from the [request](https://github.com/request/request#requestoptions-callback) module. The response body is parsed as JSON.
 
 ~~~ javascript
 client.api({
