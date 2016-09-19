@@ -12,6 +12,10 @@ Each and every option listed below is optional. Running tmi.js without options w
 
 - ``debug``: _Boolean_ - Show debug messages in console (Default: ``false``)
 
+``general``:
+
+- ``clientId``: _String_ - Your Twitch application's Client ID for use in system API requests (Default: ``null``)
+
 ``connection``: (_Optional_)
 
 - ``server``: _String_ - Connect to this server (_Overrides cluster and connect to this server instead_)
@@ -41,6 +45,9 @@ Each and every option listed below is optional. Running tmi.js without options w
 var tmi = require("tmi.js");
 
 var options = {
+    general: {
+        clientId: "3roghTRag74jkAm"
+    },
     options: {
         debug: true
     },
@@ -77,6 +84,9 @@ client.connect();
 
 ~~~ javascript
 var options = {
+    general: {
+        clientId: "3roghTRag74jkAm"
+    },
     options: {
         debug: true
     },
