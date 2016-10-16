@@ -8,7 +8,7 @@ categories: v1.0.0-rc1
 
 Query the [Twitch API](https://github.com/justintv/Twitch-API), aka Kraken, in your application or your website. It supports AJAX requests but has its limitations.
 
-**IMPORTANT**: On Monday, August 8th, 2016, Twitch is going to really-for-real require the Client-ID header on all of your API requests to Kraken. [Click here to read more](https://blog.twitch.tv/client-id-required-for-kraken-api-calls-afbb8e95f843#.ga3y34pya).
+**IMPORTANT**: Twitch is requiring the Client-ID header on all of your API requests to Kraken. [Click here to read more](https://blog.twitch.tv/client-id-required-for-kraken-api-calls-afbb8e95f843#.ga3y34pya).
 
 ## AJAX
 

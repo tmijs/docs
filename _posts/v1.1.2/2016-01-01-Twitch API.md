@@ -2,7 +2,7 @@
 layout: post
 title: "API"
 date: 2016-01-01 00:00:00 -0400
-categories: v1.0.0-rc2
+categories: v1.1.2
 ---
 # API
 
