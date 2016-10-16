@@ -11,7 +11,6 @@ Each and every option listed below is optional. Running tmi.js without options w
 ``options``: (_Optional_)
 
 - ``debug``: _Boolean_ - Show debug messages in console (Default: ``false``)
-- ``clientId``: _String_ - Your Twitch application's Client ID for use in system API requests (Default: ``null``)
 
 ``connection``: (_Optional_)
 
