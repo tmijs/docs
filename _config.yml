@@ -12,6 +12,7 @@ latest_version: v1.1.2
 hidden_versions:
     - v1.0.0-rc1
     - v1.0.0-rc2
+    - v1.2.0
 twitter:
     username: Schmoopiie
     image: "https://i.imgur.com/vsdO7N5.png"
