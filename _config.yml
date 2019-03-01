@@ -6,7 +6,7 @@ baseurl: ""
 url: "https://docs.tmijs.org"
 twitter_username: Schmoopiie
 github_username:  tmi.js
-logo: "https://i.imgur.com/vsdO7N5.png"
+logo: "https://i.imgur.com/r1N7y1c.png"
 permalink: :categories/:title.html
 latest_version: v1.3.0
 hidden_versions:
@@ -14,7 +14,7 @@ hidden_versions:
     - v1.0.0-rc2
 twitter:
     username: Schmoopiie
-    image: "https://i.imgur.com/vsdO7N5.png"
+    image: "https://i.imgur.com/r1N7y1c.png"
 
 # Build settings
 kramdown:
