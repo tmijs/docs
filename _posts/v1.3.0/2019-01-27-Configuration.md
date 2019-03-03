@@ -15,7 +15,7 @@ Each and every option listed below is optional. Running tmi.js without options w
 
 ``connection``: (_Optional_)
 
-- ``server``: _String_ - Connect to this server (_Overrides cluster and connect to this server instead_)
+- ``server``: _String_ - Connect to this server (Default: ``irc-ws.chat.twitch.tv``)
 - ``port``: _Integer_ - Connect on this port (Default: ``80``)
 - ``reconnect``: _Boolean_ - Reconnect to Twitch when disconnected from server (Default: ``false``)
 - ``maxReconnectAttempts``: _Integer_ - Max number of reconnection attempts (Default: ``Infinity``)
