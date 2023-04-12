@@ -24,6 +24,7 @@ Each and every option listed below is optional. Running tmi.js without options w
 - ``reconnectInterval``: _Integer_ - Number of ms before attempting to reconnect (Default: ``1000``)
 - ``secure``: _Boolean_ - Use secure connection (SSL / HTTPS) (_Overrides port to ``443``_) (Default: ``false``)
 - ``timeout``: _Integer_ - Number of ms to disconnect if no responses from server (Default: ``9999``)
+- ``agent``: _HttpsProxyAgent_ - Use proxy (See [node-https-proxy-agent](https://github.com/TooTallNate/node-https-proxy-agent)) (Default: ``undefined``)
 
 ``identity``: (_Optional_)
 
